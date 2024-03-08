@@ -16,6 +16,10 @@
   flex-direction: column;
 }
 
+.footer-logo{
+    width: 80px;
+}
+
 .social-icon,
 .menu {
   position: relative;

@@ -1,11 +1,15 @@
 import React from 'react'
+import logo from "../../assets/logo.png";
 import "./Footer.css"
 
 const Footer = () => {
   return (
    
     <footer className="footer">
-    
+    <div className="footer-logo">
+        <img src={logo} alt="logo" />
+      </div>
+
     <ul className="social-icon">
       <li className="social-icon__item"><a className="social-icon__link" href="#">
           <ion-icon name="logo-facebook"></ion-icon>
