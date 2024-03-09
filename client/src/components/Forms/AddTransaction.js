@@ -4,6 +4,7 @@ import { transactionContext } from "../context/TransactionContext/TransactionsCo
 
 export default function AddTransaction() {
   const { id } = useParams();
+  console.log(id);
   const { createTransactionAction, error } = useContext(transactionContext);
   const [formData, setFormData] = useState({
     name: "",
