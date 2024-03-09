@@ -1,6 +1,6 @@
 const Account = require("../../model/Account");
 const Transaction = require("../../model/Transaction");
-const User = require("../../model/user");
+const User = require("../../model/User");
 const { AppErr } = require("../../utils/appErr");
 
 
