@@ -4,8 +4,7 @@ const { registerUserCtrl,
         userLoginCtrl,
         userProfileCtrl,
         deleteUserCtrl,
-        updateUserCtrl, 
-        
+        updateUserCtrl      
     } = require('../../controllers/users/usersCtrl');
 
 
