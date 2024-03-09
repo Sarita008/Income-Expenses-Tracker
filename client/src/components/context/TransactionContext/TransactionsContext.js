@@ -47,7 +47,7 @@ export const TransactionContextProvider = ({ children }) => {
       const config = {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${state?.userAuth?.token}`,
+          Authorization: `Bearer ${state?.token?.token}`,
         },
       };
       //request
