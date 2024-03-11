@@ -61,7 +61,7 @@ const accountReducer = (state, action) => {
 //Provider
 export const AccountContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(accountReducer, INITIAL_STATE);
-  console.log(state);
+  //console.log(state);
   //Get account Details action
   const getAccountDetailsAction = async id => {
     const config = {
@@ -90,7 +90,7 @@ export const AccountContextProvider = ({ children }) => {
 
   //Create account action
   const createAccountAction = async formData => {
-    console.log(state?.userAuth);
+    //console.log(state?.userAuth);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -108,7 +108,7 @@ export const AccountContextProvider = ({ children }) => {
         window.location.href = "/dashboard";
       }
     } catch (error) {
-      console.log(error.response?.data);
+      //console.log(error.response?.data);
       dispatch({
         type: ACCOUNT_CREATION_FAIL,
         payload: error?.data?.response?.message,

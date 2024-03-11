@@ -41,7 +41,7 @@ export const TransactionContextProvider = ({ children }) => {
 
   //create account
   const createTransactionAction = async accountData => {
-    console.log(state);
+    //console.log("state: " ,state);
     try {
       //header
       const config = {
@@ -52,10 +52,10 @@ export const TransactionContextProvider = ({ children }) => {
       };
       //request
       const res = await axios.post(API_URL_TRANSACTION, accountData, config);
-      console.log(res);
+      //console.log("res: ", res);
       if (res?.data?.status === "success") {
         dispatch({ type: TRANSACTION_CREATION_SUCCES, payload: res?.data });
-        window.location.href = `/account-details/${state?.token?._id}`;
+        window.location.href = `/account-details/${accountData?.account}`;
       }
      
     } catch (error) {

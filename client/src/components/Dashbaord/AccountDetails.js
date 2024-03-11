@@ -10,7 +10,7 @@ export default function AccountDetails() {
   useEffect(() => {
     getAccountDetailsAction(accountID);
   }, [accountID]);
-  console.log(account);
+  //console.log(account);
   //Calculate total income
   const totalIncome = account?.transactions?.reduce((acc, transaction) => {
     if (transaction?.transactionType === "Income") {

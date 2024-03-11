@@ -4,7 +4,7 @@ import { transactionContext } from "../context/TransactionContext/TransactionsCo
 
 export default function AddTransaction() {
   const { id } = useParams();
-  console.log(id);
+  //console.log(id);
   const { createTransactionAction, error } = useContext(transactionContext);
   const [formData, setFormData] = useState({
     name: "",
@@ -19,6 +19,8 @@ export default function AddTransaction() {
   const handleChange = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  //console.log("for data:", formData);
+
 
   //handle form submit
   const handleSubmit = e => {
@@ -62,6 +64,7 @@ export default function AddTransaction() {
                   onChange={handleChange}
                   className="mt-1 block w-full border-2 rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 >
+                  <option disable selected hidden>choose transaction type</option>
                   <option value="Income">Income (+)</option>
                   <option value="Expenses">Expense (-)</option>
                 </select>
@@ -91,6 +94,7 @@ export default function AddTransaction() {
                   onChange={handleChange}
                   className="mt-1 block w-full border-2 rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 >
+                  <option disable selected hidden>choose transaction category</option>
                   <option value=" Food">Food</option>
                   <option value="Transportation">Transportation</option>
                   <option value="Entertainment">Entertainment</option>
