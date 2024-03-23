@@ -78,14 +78,16 @@ export default function AddAccount() {
                   <option value="Checking">Checking</option>
                   <option value="Credit Card">Credit Card</option>
                   <option value="Utilities">Utilities</option>
-                  <option value="Builing">Billing</option>
+                  <option value="School">School</option>
                   <option value="Travel">Travel</option>
                   <option value="Education">Education</option>
                   <option value="Personal">Personal</option>
                   <option value="Groceries">Groceries</option>
                   <option value="Entertainment">Entertainment</option>
                   <option value="Project">Project</option>
-                  <option value="Uncategorized">Uncategorized</option>
+                  <option value="Loan">Loan</option>
+                  <option value="Cash Flow">Cash Flow</option>
+                  <option value="other">other</option>
                 </select>
               </div>
               <div>
@@ -108,7 +110,7 @@ export default function AddAccount() {
                   type="submit"
                   className="flex w-full  justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                 >
-                  Add New Transaction
+                  Add New Account
                 </button>
               </div>
             </form>

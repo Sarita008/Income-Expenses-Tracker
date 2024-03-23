@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { authContext } from "../context/AuthContext/AuthContext";
 import Header from "../Header/Header";
-import img1 from "../../assets/img1.jpg"
+import img1 from "../../assets/img1.jpg";
+import img2 from "../../assets/img2.jpg";
+
 const HomePage = () => {
+  const { token } = useContext(authContext);
+
   return (
     <>
       <Header />
@@ -106,7 +111,7 @@ const HomePage = () => {
             <div className="w-full md:w-1/2 px-4">
               <div className="relative mx-auto md:mr-0 max-w-max">
                 <img
-                  src="https://cdn.pixabay.com/photo/2015/01/28/22/20/bookkeeping-615384_1280.jpg"
+                  src={img2}
                   alt="home"
                 />
               </div>
@@ -129,12 +134,21 @@ const HomePage = () => {
               We believe a diverse team, approaches to work and transparency are
               key to our success.
             </p>
+            {token ? 
+            <a
+              className="inline-flex items-center justify-center px-7 py-3 h-14 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
+              href="/dashboard/accounts/create"
+            >
+              Add Account
+            </a>
+            :
             <a
               className="inline-flex items-center justify-center px-7 py-3 h-14 w-full md:w-auto text-lg leading-7 text-green-50 bg-green-500 hover:bg-green-600 font-medium focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 border border-transparent rounded-md shadow-sm"
               href="/login"
             >
               Log In
             </a>
+          }
           </div>
           <div className="relative max-w-4xl mx-auto">
             <img
